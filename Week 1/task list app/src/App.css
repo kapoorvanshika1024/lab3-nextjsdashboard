@@ -1,0 +1,51 @@
+
+body {
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  color: #333;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header span {
+  font-size: 1.2em;
+}
+
+.task-group {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.task-group h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.task-group ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task-group ul li {
+  font-size: 1.2em;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-group ul li:last-child {
+  border-bottom: none;
+}
