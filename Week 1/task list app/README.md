@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# Lab 2: Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app to manage tasks across different categories. This project demonstrates the use of functional components, state management with useState, and static typing using TypeScript.
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add Task: Users can add tasks under specific categories.
 
-## Expanding the ESLint configuration
+Filter Tasks by Category: Users can filter tasks based on the category name.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Delete Task: Users can delete specific tasks from the task list.
 
-- Configure the top-level `parserOptions` property like this:
+View Total Tasks: Displays the total number of tasks across all categories.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+# Components
+The app is built with the following components:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. App.tsx
+The main component that holds the application’s state. It handles the following:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Task List State: Holds an array of task categories, each containing a list of tasks.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Add Task: Allows users to add tasks to specific categories.
+
+Delete Task: Allows users to remove tasks.
+
+Filter Tasks: Provides functionality to filter the task list by category.
+
+2. Header.tsx
+
+Displays the total number of tasks and a header title.
+
+3. Search.tsx
+
+A search bar that allows users to filter tasks by category. It uses a controlled input to handle the search term and passes the term to the parent (App.tsx) to filter the task list.
+
+4. AddTaskForm.tsx
+
+A form component that allows users to add new tasks to a specific category. It takes user input for the task name and category and passes it back to App.tsx.
+
+5. TaskList.tsx
+
+Displays a list of tasks for each category. Each task has a delete button that allows for the removal of individual tasks.
+
+# Challenges Faced
+
+1. State Management Complexity
+
+2. Handling Task Deletion
+
+3. Dynamic Task Filtering
+
+# Technologies Used
+
+1. React
+
+2. TypeScript 
+
+3. CSS
+
+4. Vite
